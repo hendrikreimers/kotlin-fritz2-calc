@@ -1,3 +1,130 @@
-body {
-  background: red;
+/* --------------------------------------- */
+/* Colors    */
+
+.bg-lightgray { background-color: #d3d4d6; }
+.bg-gray { background-color: #c6c7c9; }
+.bg-dark { background-color: #202020; }
+.bg-orange { background-color: #f68e13; }
+
+.txt-white { color: #fff; }
+
+/* --------------------------------------- */
+
+
+
+/* --------------------------------------- */
+/* Basic Layout    */
+
+.row,
+.row > div,
+.container-fluid {
+  margin: 0;
+  padding: 0;
 }
+
+.row > div {
+  text-align: center;
+  border-left: 1px solid #909193;
+  border-top: 1px solid #909193;
+
+  position: relative;
+}
+
+.row:first-child  > div {
+  border-top: 0;
+}
+.row > div:first-child {
+  border-left: 0;
+}
+
+.row > div.result {
+  font-size: 12vh;
+  text-align: right;
+  border: 0;
+}
+
+.align-middle {
+  position: absolute;
+  bottom: 30%;
+  left: 45%;
+}
+
+.row > div.result > .align-bottom {
+  position: absolute;
+  bottom: 0;
+  right: 15px;
+}
+
+.btn {
+  border-radius: 0;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* --------------------------------------- */
+
+
+
+/* --------------------------------------- */
+/* This does the body full height trick    */
+
+html, body {
+  height: 100%;
+  overflow: auto;
+  font-family: 'Open sans', Arial, Helvetica, sans-serif;
+  font-size: 5vh;
+}
+
+.container-fluid.max-height,
+.row.max-height {
+  height: 100%;
+  position: relative;
+}
+
+.row.max-height.mh-1 {
+  height: 18.7%;
+}
+.row.max-height.mh-2 {
+  height: 25%;
+}
+
+@media (min-width: 767px) {
+  .row.max-height > div.max-height {
+    position: absolute;
+    top: 200px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    overflow: hidden;
+    overflow-y: auto;
+  }
+
+  .row.max-height > div.max-height.col-sm-push-4 {
+    left: 33.3333%;
+  }
+
+  .playlists > .list {
+    right: 64%;
+  }
+
+  .songs > .list {
+    left: 36%;
+  }
+}
+
+@media (max-width: 767px) {
+  html, body,
+  .container-fluid.max-height,
+  .row.max-height,
+  .row.max-height > div.max-height {
+    position: static;
+    /*height: auto;*/
+    overflow: auto;
+    overflow-y: auto;
+  }
+}
+
+/* --------------------------------------- */
