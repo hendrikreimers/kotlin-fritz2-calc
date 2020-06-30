@@ -8,7 +8,7 @@ import dev.fritz2.dom.html.HtmlElements
  *
  */
 fun HtmlElements.container(id: String? = null, content: Div.() -> Unit): Div {
-    return div("container-fluid max-height", id = id) {
+    return div("container", id = id) {
         content()
     }
 }

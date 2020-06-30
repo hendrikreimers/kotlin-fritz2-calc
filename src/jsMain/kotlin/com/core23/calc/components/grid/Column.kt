@@ -30,9 +30,12 @@ data class ColSizes(
     private val prefix: String = "col"
 
     fun toClassString(): String {
-        val classList: ArrayList<String> = arrayListOf()
+        val classList: MutableList<String> = mutableListOf()
 
-        if ( default !== null ) classList.add("$prefix-${getStringInRange(default)}") else "col"
+        if ( default !== null )
+            classList.add("$prefix-${getStringInRange(default)}")
+        else classList.add(prefix)
+        
         if ( xs !== null ) classList.add(getBreakpointString("xs", xs))
         if ( sm !== null ) classList.add(getBreakpointString("xs", sm))
         if ( md !== null ) classList.add(getBreakpointString("xs", md))

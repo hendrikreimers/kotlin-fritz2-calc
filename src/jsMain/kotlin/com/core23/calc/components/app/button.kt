@@ -9,8 +9,7 @@ fun HtmlElements.keypadButton(
         color: BtnColorMap = BtnColorMap.LIGHTGRAY,
         size: Int = 3
 ): Div {
-    val classColSize: String = ColSizes(size).toClassString()
-    val baseClass: String = "btn $classColSize ${color.className}"
+    val baseClass: String = "btn ${color.className}"
 
     return div(baseClass) {
         span("align-middle") {

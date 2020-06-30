@@ -1,7 +1,6 @@
 let basePath = '../../../../src/scss/';
 
 if ( !config.entry ) config.entry = [];
-config.entry[Object.keys(config.entry).length] = basePath + 'bootstrap.scss';
 config.entry[Object.keys(config.entry).length] = basePath + 'app.scss';
 
 config.module.rules.push({
